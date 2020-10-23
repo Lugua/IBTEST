@@ -11,6 +11,6 @@ RUN apt-get update && \
     apt-get -y install fontconfig libfreetype6 libx11-6 libxext6 libxrender1 && \
     apt-get clean
 
-EXPOSE 8080
+EXPOSE 9000
 CMD []
 ENTRYPOINT ["npm", "start"]

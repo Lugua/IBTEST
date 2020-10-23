@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cabyssvc
+  labels:
+    app: myapp
+spec:
+  type: NodePort
+  ports:
+  - port: 9000
+    protocol: TCP
+    name: http
+  selector:
+    app: cabysapp
+---
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: cabysapp
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: cabysapp
+    spec:
+      containers:
+      - name: cabysapp
+        image: lugua/cabysapp:v1.0
+        ports:
+        - containerPort: 9000

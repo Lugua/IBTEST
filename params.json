@@ -1,0 +1,24 @@
+{
+    "environment": {
+        "appName": "IBMTEST",
+        "appDescription": "IBMTEST",
+        "log4js": {
+            "appenders": {
+                "console": {
+                    "type": "console"
+                }
+            },
+            "categories": {
+                "default": {
+                    "appenders": [
+                        "console"
+                    ],
+                    "level": "trace"
+                }
+            }
+        },
+        "name": "development",
+        "port": 9000,
+        "logo": ""
+    }
+}
